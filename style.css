@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 600;
+}
+
+.img-fluid.logo {
+	width: 30%;
+	margin-left: 350px;
+}
+
+.submit-area {
+	box-shadow: 5px 5px 10px grey;
+	padding: 40px;
+	border-radius: 15px;
+}
+
+/* .submit-area input {
+	outline: none;
+	overflow: hidden;
+} */
+.form-control:focus {
+	box-shadow: none;
+	border-color: #ced4da;
+}
+
+#transaction-area {
+	display: none;
+}
+
+.deposit {
+	background-color: blueviolet;
+	color: white;
+}
+.withdraw {
+	background-color: darkcyan;
+	color: white;
+}
+.balance {
+	background-color: lightcoral;
+	color: white;
+}
+
+.card {
+	border-radius: 15px;
+	margin: 0 20px;
+	padding: 25px 15px;
+}
+
+.tr {
+	box-shadow: 5px 5px 10px grey;
+	padding: 40px;
+	border-radius: 15px;
+}

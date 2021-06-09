@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-------------------- Bootstrap ---------------------->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<!-- Main Css  -->
+		<link rel="stylesheet" href="./style.css" />
+		<title>NRBC Bank</title>
+	</head>
+	<body>
+		<div class="container">
+			<img src="./image/index.png" alt="NRBC LOGO" class="img-fluid logo" />
+			<div id="login-area">
+				<div class="submit-area">
+					<h4>
+						Login
+					</h4>
+					<input type="text" class="form-control" placeholder="Email" />
+					<br />
+					<input type="password" class="form-control" placeholder="Password" />
+					<br />
+					<button type="button" id="login" class="btn btn-success">
+						Login
+					</button>
+				</div>
+			</div>
+			<div id="transaction-area">
+				<div class="row mb-5">
+					<div class="col-md-4">
+						<div class="deposit card">
+							<h4>Deposit</h4>
+							<h2>$<span id="currentDep">00</span></h2>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="withdraw card">
+							<h4>Withdraw</h4>
+							<h2>$<span id="currentWithdraw">00</span></h2>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="balance card">
+							<h4>Balance</h4>
+							<h2>$<span id="currentBalance">00</span></h2>
+						</div>
+					</div>
+				</div>
+				<br />
+				<div id="transciton">
+					<div class="row mt-5">
+						<div class="col-md-6">
+							<div class="tr">
+								<h3>Deposit</h3>
+								<input
+									type="text"
+									id="depValue"
+									class="form-control"
+									placeholder="Amount you want to deposit $"
+								/>
+								<br />
+								<button type="button" id="dep" class="btn btn-success">
+									Deposit
+								</button>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="tr">
+								<h3>Withdraw</h3>
+								<input
+									type="text"
+									id="withdrawValue"
+									class="form-control"
+									placeholder="Amount you want to withdraw $"
+								/>
+								<br />
+								<button type="button" id="withdr " class="btn btn-success">
+									Withdraw
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--------------------- Script --------------------------->
+		<!--------- Bootstrap ------------>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+		<!---------------------- Main Script  ---------------------->
+		<script src="./app.js"></script>
+	</body>
+</html>
