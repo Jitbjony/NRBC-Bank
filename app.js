@@ -11,24 +11,38 @@ loginButton.addEventListener('click', function(){
 
 // Transaction Function
 const depositButton = document.getElementById("dep");
+const withdrawButton = document.getElementById("withdr");
 
 depositButton.addEventListener('click', function(){
-    //deposit input
-    const deposit = document.getElementById("depValue");
-    const depositValue = parseFloat(deposit.value);
-    // console.log(depositValue);
-    
-    //deposit value set 
+    const amount = getAmmount("depValue")
+     
+    callBalance("currentDep", amount)
 
-    const currentDep = document.getElementById("currentDep");
-    const currentDepositValue = parseFloat(currentDep.innerText);
-    
-    const totalDeposit = depositValue + currentDepositValue;
-    // console.log(totalDeposit);
-    document.getElementById('currentDep').innerText = totalDeposit
-
-    //input value none
+    callBalance("currentBalance", amount)
     document.getElementById("depValue").value = ""
+})
 
+// Get amount
+function getAmmount(id){
+    const amount = document.getElementById(id);
+    const amountValue = parseFloat(amount.value);
+    return amountValue
+}
 
+//transaction function..... Given value is not in function so we declare in arguments
+function callBalance(id, givenValue){
+    const balance = document.getElementById(id).innerText;
+    const balanceValue = parseFloat(balance);
+    const totalBalance = givenValue+ balanceValue;
+    document.getElementById(id).innerText = totalBalance;
+}
+
+withdrawButton.addEventListener("click", function(){
+    const ammount = getAmmount("withdrawInput");
+
+    callBalance("currentWithdraw",  ammount)
+    // current balance - current withdraw
+    callBalance("currentBalance", -1 * ammount)
+
+    document.getElementById("withdrawInput").value = ""
 })
